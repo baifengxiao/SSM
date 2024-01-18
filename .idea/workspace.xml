@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="2.Spring:引入Log4j2日志">
-      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-first/src/test/java/com/this0/spring6/bean/testDIBySet.java" afterDir="false" />
+    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="依赖注入之setter注入">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-first/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.testDIBySet.testDIBySet">
+  <component name="RunManager" selected="JUnit.testDIBySet">
     <configuration name="HelloWorldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring6-first" />
       <extension name="coverage">
@@ -112,18 +109,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorldTest.testHelloWorldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testDIBySet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring6-first" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.this0.*" />
+          <option name="PATTERN" value="com.this0.spring6.bean.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.this0" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.HelloWorldTest" />
-      <option name="METHOD_NAME" value="testHelloWorldTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.testDIBySet" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testDIBySet" />
         <item itemvalue="JUnit.testDIBySet.testDIBySet" />
         <item itemvalue="JUnit.HelloWorldTest.testHelloWorld (1)" />
         <item itemvalue="JUnit.HelloWorldTest.testHelloWorld" />
         <item itemvalue="JUnit.HelloWorldTest" />
-        <item itemvalue="JUnit.HelloWorldTest.testHelloWorldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +161,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691773778002</updated>
-      <workItem from="1705548156138" duration="5274000" />
+      <workItem from="1705548156138" duration="5889000" />
     </task>
     <task id="LOCAL-00001" summary="1.Spring:通过配置文件获取对象实践">
       <option name="closed" value="true" />
@@ -183,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705551408687</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="依赖注入之setter注入">
+      <option name="closed" value="true" />
+      <created>1705581139955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705581139955</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +219,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.Spring:通过配置文件获取对象实践" />
     <MESSAGE value="2.Spring:引入Log4j2日志" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.Spring:引入Log4j2日志" />
+    <MESSAGE value="依赖注入之setter注入" />
+    <option name="LAST_COMMIT_MESSAGE" value="依赖注入之setter注入" />
   </component>
 </project>

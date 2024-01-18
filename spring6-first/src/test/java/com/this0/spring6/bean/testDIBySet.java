@@ -8,7 +8,7 @@ public class testDIBySet {
     @Test
     public void testDIBySet(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("spring-di.xml");
-        Student studentOne = ac.getBean("studentOne", Student.class);
+        Student studentOne = ac.getBean("studentTwo", Student.class);
         System.out.println(studentOne);
     }
 }
