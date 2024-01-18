@@ -64,7 +64,12 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name='" + name + '\'' + ", age=" + age + ", sex='" + sex + '\'' + '}';
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                ", clazz=" + clazz +
+                '}';
     }
-
 }
