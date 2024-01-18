@@ -10,6 +10,18 @@ public class Student {
 
     private String sex;
 
+    private Clazz clazz;
+
+    public Clazz getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Clazz clazz) {
+        this.clazz = clazz;
+    }
+
+    public Student() {
+    }
 
     public Student(Integer id, String name, Integer age, String sex) {
         this.id = id;

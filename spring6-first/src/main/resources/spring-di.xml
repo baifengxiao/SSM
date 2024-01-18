@@ -3,10 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="studentTwo" class="com.this0.spring6.bean.Student">
-        <constructor-arg value="1002"></constructor-arg>
-        <constructor-arg value="李四"></constructor-arg>
-        <constructor-arg value="33"></constructor-arg>
-        <constructor-arg value="女"></constructor-arg>
+    <bean id="studentFour" class="com.this0.spring6.bean.Student">
+        <property name="id" value="1004"></property>
+        <property name="name" value="赵六"></property>
+        <property name="age" value="26"></property>
+        <property name="sex" value="女"></property>
+        <!-- ref属性：引用IOC容器中某个bean的id，将所对应的bean为属性赋值 -->
+        <property name="clazz" ref="clazzOne"></property>
+    </bean>
+    <bean id="clazzOne" class="com.this0.spring6.bean.Clazz">
+        <property name="clazzId" value="1111"></property>
+        <property name="clazzName" value="财源滚滚班"></property>
     </bean>
 </beans>
