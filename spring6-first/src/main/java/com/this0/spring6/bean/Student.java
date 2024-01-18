@@ -1,5 +1,7 @@
 package com.this0.spring6.bean;
 
+import java.util.Arrays;
+
 public class Student {
 
     private Integer id;
@@ -62,6 +64,16 @@ public class Student {
         this.sex = sex;
     }
 
+    private String[] hobbies;
+
+    public String[] getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(String[] hobbies) {
+        this.hobbies = hobbies;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -70,6 +82,7 @@ public class Student {
                 ", age=" + age +
                 ", sex='" + sex + '\'' +
                 ", clazz=" + clazz +
+                ", hobbies=" + Arrays.toString(hobbies) +
                 '}';
     }
 }

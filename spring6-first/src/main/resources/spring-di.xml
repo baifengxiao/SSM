@@ -8,14 +8,15 @@
         <property name="name" value="赵六"></property>
         <property name="age" value="26"></property>
         <property name="sex" value="女"></property>
-
-        <property name="clazz">
-            <!-- 在一个bean中再声明一个bean就是内部bean -->
-            <!-- 内部bean只能用于给属性赋值，不能在外部通过IOC容器获取，因此可以省略id属性 -->
-            <bean class="com.this0.spring6.bean.Clazz">
-                <property name="clazzId" value="2222"></property>
-                <property name="clazzName" value="远大前程班"></property>
-            </bean>
+        <!-- ref属性：引用IOC容器中某个bean的id，将所对应的bean为属性赋值 -->
+        <property name="clazz" ref="clazzOne"></property>
+        <property name="hobbies">
+            <array>
+                <value>抽烟</value>
+                <value>喝酒</value>
+                <value>烫头</value>
+            </array>
         </property>
     </bean>
+    <bean id="clazzOne" class="com.this0.spring6.bean.Clazz"/>
 </beans>
