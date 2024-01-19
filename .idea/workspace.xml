@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="依赖注入之引入内部bean">
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/UserFactoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/test/java/com/this0/spring6/bean/testUserFactoryBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,13 +20,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -33,10 +36,15 @@
         <option name="userSettingsFile" value="D:\SDE_YPT\apache-maven-3.9.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="disabledProfiles">
+      <list>
+        <option value="jdk-1.8" />
+      </list>
+    </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2b6v4oZ0f2MrjVOIYMPcaTzeMor" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,23 +53,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "fileTemplates",
-    "settings.editor.splitter.proportion": "0.3058104",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.3058104&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.testDIBySet">
+}</component>
+  <component name="RunManager" selected="JUnit.testUserFactoryBean.testUserFactoryBean">
     <configuration name="HelloWorldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring6-first" />
       <extension name="coverage">
@@ -140,11 +148,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testUserFactoryBean.testUserFactoryBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-first" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.this0.spring6.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.testUserFactoryBean" />
+      <option name="METHOD_NAME" value="testUserFactoryBean" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testDIBySet" />
+        <item itemvalue="JUnit.testUserFactoryBean.testUserFactoryBean" />
         <item itemvalue="JUnit.testDI.testDIBySet" />
-        <item itemvalue="JUnit.HelloWorldTest.testHelloWorld (1)" />
         <item itemvalue="JUnit.HelloWorldTest.testHelloWorld" />
         <item itemvalue="JUnit.HelloWorldTest" />
       </list>
