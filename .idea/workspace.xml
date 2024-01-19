@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="测试FactoryBean">
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/dao/Impl/UserDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/resources/spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/test/java/com/this0/spring6/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="测试自动装配方法注入">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705677827693</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="测试自动装配属性注入">
+      <option name="closed" value="true" />
+      <created>1705704957221</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705704957221</updated>
+    </task>
+    <task id="LOCAL-00010" summary="测试自动装配方法注入">
+      <option name="closed" value="true" />
+      <created>1705705322729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705705322729</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +326,8 @@
     <MESSAGE value="依赖注入之引入外部bean" />
     <MESSAGE value="依赖注入之引入内部bean" />
     <MESSAGE value="测试FactoryBean" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试FactoryBean" />
+    <MESSAGE value="测试自动装配属性注入" />
+    <MESSAGE value="测试自动装配方法注入" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试自动装配方法注入" />
   </component>
 </project>
