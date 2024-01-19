@@ -10,11 +10,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring6-first</module>
+        <module>spring6-ioc-annotation</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -33,6 +34,7 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.3.1</version>
         </dependency>
+
         <!--log4j2的依赖-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
