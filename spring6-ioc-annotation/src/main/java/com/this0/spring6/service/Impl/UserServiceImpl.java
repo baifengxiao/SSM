@@ -10,7 +10,7 @@ public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
 
-    @Autowired
+//    @Autowired
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }

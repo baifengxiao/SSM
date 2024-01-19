@@ -9,7 +9,7 @@ public class UserController {
 
     private UserService userService;
 
-    @Autowired
+//    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
