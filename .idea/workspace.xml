@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="依赖注入之引入内部bean">
-      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/bean/UserFactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring6-first/src/test/java/com/this0/spring6/bean/testUserFactoryBean.java" afterDir="false" />
+    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="测试FactoryBean">
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/dao/imp/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/java/com/this0/spring6/service/imp/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring6-first/src/main/resources/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/src/main/resources/spring-di.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring6-first/src/test/java/com/this0/spring6/bean/testUserFactoryBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-first/src/test/java/com/this0/spring6/bean/testAutoWireByXML.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +25,22 @@
       <list>
         <option value="Kotlin Class" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -47,6 +60,7 @@
 }</component>
   <component name="ProjectId" id="2b6v4oZ0f2MrjVOIYMPcaTzeMor" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -69,7 +83,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.testUserFactoryBean.testUserFactoryBean">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.this0.spring6.bean" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.testAutoWireByXML.testUserFactoryBean">
     <configuration name="HelloWorldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring6-first" />
       <extension name="coverage">
@@ -117,11 +136,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testAutoWireByXML.testUserFactoryBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-first" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.this0.spring6.dao.imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.testAutoWireByXML" />
+      <option name="METHOD_NAME" value="testUserFactoryBean" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testDI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring6-first" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.this0.spring6.bean.*" />
+          <option name="PATTERN" value="com.this0.spring6.dao.imp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,7 +171,7 @@
       <module name="spring6-first" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.this0.spring6.bean.*" />
+          <option name="PATTERN" value="com.this0.spring6.dao.imp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,25 +183,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testUserFactoryBean.testUserFactoryBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.this0.spring6.bean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.testUserFactoryBean" />
-      <option name="METHOD_NAME" value="testUserFactoryBean" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.testUserFactoryBean.testUserFactoryBean" />
+        <item itemvalue="JUnit.testAutoWireByXML.testUserFactoryBean" />
         <item itemvalue="JUnit.testDI.testDIBySet" />
         <item itemvalue="JUnit.HelloWorldTest.testHelloWorld" />
         <item itemvalue="JUnit.HelloWorldTest" />
@@ -234,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705594368563</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="测试FactoryBean">
+      <option name="closed" value="true" />
+      <created>1705677725650</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705677725650</updated>
+    </task>
+    <task id="LOCAL-00008" summary="测试FactoryBean">
+      <option name="closed" value="true" />
+      <created>1705677827693</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1705677827693</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +286,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="test" />
                       </list>
                     </value>
                   </entry>
@@ -270,6 +305,7 @@
     <MESSAGE value="依赖注入之构造器注入" />
     <MESSAGE value="依赖注入之引入外部bean" />
     <MESSAGE value="依赖注入之引入内部bean" />
-    <option name="LAST_COMMIT_MESSAGE" value="依赖注入之引入内部bean" />
+    <MESSAGE value="测试FactoryBean" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试FactoryBean" />
   </component>
 </project>

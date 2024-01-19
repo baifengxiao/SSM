@@ -1,0 +1,2 @@
+xml方式自动装配的说明：
+此案例中，如果不使用自动装配，那么需要手动给userController装配一个UserService类型的bean,比如叫：userService，自动装配就是完成这个过程（需要有对应的set方法）
