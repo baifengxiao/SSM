@@ -3,9 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userController" class="com.this0.spring6.controller.UserController" autowire="byType"></bean>
+    <bean id="userController" class="com.this0.spring6.controller.UserController" autowire="byName"></bean>
 
-    <bean id="userService" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byType"></bean>
+    <bean id="userService" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byName"></bean>
+    <bean id="userServiceImpl" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byName"></bean>
 
     <bean id="userDao" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>
+    <bean id="userDaoImpl" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>
 </beans>
