@@ -10,13 +10,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Resource(name = "myUserDao")
-    private UserDao userDao;
+    @Resource
+    private UserDao myUserDao;
 
     @Override
     public void out() {
-
-        userDao.print();
+        myUserDao.print();
         System.out.println("Service层执行结束");
     }
 }
