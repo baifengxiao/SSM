@@ -11,11 +11,12 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
     @Resource
-    private UserDao myUserDao;
+    @Qualifier("userDaoImpl")
+    private UserDao myUserDao1;
 
     @Override
     public void out() {
-        myUserDao.print();
+        myUserDao1.print();
         System.out.println("Service层执行结束");
     }
 }
