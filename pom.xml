@@ -12,6 +12,7 @@
         <module>spring6-first</module>
         <module>spring6-ioc-annotation</module>
         <module>spring6-aop</module>
+        <module>mybatis</module>
     </modules>
 
     <properties>
@@ -21,6 +22,22 @@
     </properties>
 
     <dependencies>
+            <!-- mybatis依赖 -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>3.5.11</version>
+            </dependency>
+
+            <!-- MySQL驱动 mybatis底层依赖jdbc驱动实现,本次不需要导入连接池,mybatis自带! -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.25</version>
+            </dependency>
+
+
+
         <!--spring context依赖-->
         <!--当你引入Spring Context依赖之后，表示将Spring的基础依赖引入了-->
         <dependency>
@@ -47,7 +64,6 @@
             <artifactId>log4j-slf4j2-impl</artifactId>
             <version>2.19.0</version>
         </dependency>
-
     </dependencies>
 
 </project>

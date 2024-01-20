@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.this0.mapper.EmployeeMapper">
+
+<select id="selectEmployee" resultType="com.this0.pojo.Employee">
+    select emp_id empId,emp_name empName, emp_salary empSalary from t_emp where emp_id = #{empId}
+</select>
+</mapper>
