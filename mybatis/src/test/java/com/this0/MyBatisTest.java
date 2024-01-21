@@ -33,9 +33,12 @@ public class MyBatisTest {
         EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
 
         // 4. 调用代理类方法既可以触发对应的SQL语句
-        Employee employee = employeeMapper.selectEmployee(1);
+//        Employee employee = employeeMapper.selectEmployee(1);
+//
+//        System.out.println("employee = " + employee);
 
-        System.out.println("employee = " + employee);
+        int result = employeeMapper.updateEmployee(1, 3);
+        System.out.println("result = " + result);
 
         // 4.关闭SqlSession
         session.commit(); //提交事务 [DQL不需要,其他需要]
