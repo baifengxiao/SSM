@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Param;
 import java.util.Map;
 
 public interface EmployeeMapper {
+
+    int selectEmpCount();
     Employee selectEmployee(Integer empId);
     int updateEmployee(@Param("empId") Integer empId, @Param("empSalary") Integer empSalary);
     int insertEmployee(Employee employee);

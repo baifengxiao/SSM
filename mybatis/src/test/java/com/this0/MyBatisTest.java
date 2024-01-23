@@ -3,12 +3,15 @@ package com.this0;
 import com.this0.mapper.EmployeeMapper;
 import com.this0.pojo.Employee;
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,7 +20,9 @@ import java.util.Map;
 
 public class MyBatisTest {
 
+    private Logger logger = LoggerFactory.getLogger(MyBatisTest.class);
     private SqlSession session;
+
     //junit5会在每一个@Test方法前执行@BeforeEach方法
     @BeforeEach
     public void init() throws IOException {
@@ -36,6 +41,17 @@ public class MyBatisTest {
         paramMap.put("empIdKey", 4);
 
         int result = mapper.updateEmployeeByMap(paramMap);
+    }
+
+    @Test
+
+    public void testEmpCount() {
+
+        EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+
+        int count = employeeMapper.selectEmpCount();
+
+        logger.info("count=" + count);
     }
 
     @AfterEach

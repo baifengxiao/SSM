@@ -16,4 +16,7 @@
     <select id="selectEmployee" resultType="com.this0.pojo.Employee">
     select emp_id empId,emp_name empName, emp_salary empSalary from t_emp where emp_id = #{empId}
 </select>
+    <select id="selectEmpCount" resultType="java.lang.Integer">
+        select count(*) from t_emp
+    </select>
 </mapper>
