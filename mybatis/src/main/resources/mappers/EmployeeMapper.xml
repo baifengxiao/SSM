@@ -4,36 +4,51 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.this0.mapper.EmployeeMapper">
     <insert id="insertEmployee">
-        insert into t_emp(emp_name,emp_salary) values(#{empName},#{empSalary})
+        insert into t_emp(emp_name, emp_salary)
+        values (#{empName}, #{empSalary})
+    </insert>
+    <!-- int insertEmployee(Employee employee); -->
+    <!-- useGeneratedKeys属性字面意思就是“使用生成的主键” -->
+    <!-- keyProperty属性可以指定主键在实体类对象中对应的属性名，Mybatis会将拿到的主键值存入这个属性 -->
+    <insert id="insertEmployeeGen" useGeneratedKeys="true" keyProperty="empId">
+        insert into t_emp(emp_name, emp_salary)
+        values (#{empName}, #{empSalary})
     </insert>
     <update id="updateEmployee">
-        update t_emp set emp_salary=#{empSalary} where emp_id=#{empId}
+        update t_emp
+        set emp_salary=#{empSalary}
+        where emp_id = #{empId}
     </update>
     <update id="updateEmployeeByMap">
-        update t_emp set emp_salary=#{empSalaryKey} where emp_id=#{empIdKey}
+        update t_emp
+        set emp_salary=#{empSalaryKey}
+        where emp_id = #{empIdKey}
     </update>
 
     <select id="selectEmployee" resultType="com.this0.pojo.Employee">
-    select emp_id empId,emp_name empName, emp_salary empSalary from t_emp where emp_id = #{empId}
-</select>
+        select emp_id empId, emp_name empName, emp_salary empSalary
+        from t_emp
+        where emp_id = #{empId}
+    </select>
     <select id="selectEmpCount" resultType="java.lang.Integer">
-        select count(*) from t_emp
+        select count(*)
+        from t_emp
     </select>
     <select id="selectEmpNameAndMaxSalary" resultType="map">
         <!-- Map<String,Object> selectEmpNameAndMaxSalary(); -->
         <!-- 返回工资最高的员工的姓名和他的工资 -->
 
-            SELECT
-                emp_name 员工姓名,
-                emp_salary 员工工资,
-                (SELECT AVG(emp_salary) FROM t_emp) 部门平均工资
-            FROM t_emp WHERE emp_salary=(
-                SELECT MAX(emp_salary) FROM t_emp
-            )
+        SELECT
+        emp_name 员工姓名,
+        emp_salary 员工工资,
+        (SELECT AVG(emp_salary) FROM t_emp) 部门平均工资
+        FROM t_emp WHERE emp_salary=(
+        SELECT MAX(emp_salary) FROM t_emp
+        )
 
     </select>
     <select id="selectAll" resultType="com.this0.pojo.Employee">
-        select  emp_id , emp_name, emp_salary
+        select emp_id, emp_name, emp_salary
         from t_emp
     </select>
 </mapper>

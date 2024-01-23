@@ -8,6 +8,8 @@ import java.util.Map;
 
 public interface EmployeeMapper {
 
+    int insertEmployeeGen(Employee employee);
+
     List<Employee> selectAll();
 
     Map<String,Object> selectEmpNameAndMaxSalary();

@@ -24,6 +24,16 @@ public class MyBatisTest {
 
     private Logger logger = LoggerFactory.getLogger(MyBatisTest.class);
     private SqlSession session;
+
+    @Test
+    public void testSaveEmp() {
+        EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+        Employee employee = new Employee();
+        employee.setEmpName("john");
+        employee.setEmpSalary(666.66);
+        employeeMapper.insertEmployeeGen(employee);
+        logger.info("employee.getEmpId() = " + employee.getEmpId());
+    }
     
     @Test
     public void testList(){
