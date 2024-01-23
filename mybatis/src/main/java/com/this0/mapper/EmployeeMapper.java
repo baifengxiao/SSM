@@ -7,6 +7,7 @@ import java.util.Map;
 
 public interface EmployeeMapper {
 
+    Map<String,Object> selectEmpNameAndMaxSalary();
 
     int selectEmpCount();
 

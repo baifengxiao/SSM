@@ -17,19 +17,34 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MyBatisTest {
 
     private Logger logger = LoggerFactory.getLogger(MyBatisTest.class);
     private SqlSession session;
 
+    @Test
+    public void testQueryEmpNameAndSalary() {
+
+        EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+
+        Map<String, Object> resultMap = employeeMapper.selectEmpNameAndMaxSalary();
+
+        Set<Map.Entry<String, Object>> entrySet = resultMap.entrySet();
+
+        for (Map.Entry<String, Object> entry : entrySet) {
+            String key = entry.getKey();
+            Object value = entry.getValue();
+            logger.info(key + "=" + value);
+        }
+
+    }
+
     //junit5会在每一个@Test方法前执行@BeforeEach方法
     @BeforeEach
     public void init() throws IOException {
-        session = new SqlSessionFactoryBuilder()
-                .build(
-                        Resources.getResourceAsStream("mybatis-config.xml"))
-                .openSession();
+        session = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("mybatis-config.xml")).openSession();
     }
 
     @Test

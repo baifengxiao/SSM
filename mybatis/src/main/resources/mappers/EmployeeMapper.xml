@@ -19,4 +19,17 @@
     <select id="selectEmpCount" resultType="java.lang.Integer">
         select count(*) from t_emp
     </select>
+    <select id="selectEmpNameAndMaxSalary" resultType="map">
+        <!-- Map<String,Object> selectEmpNameAndMaxSalary(); -->
+        <!-- 返回工资最高的员工的姓名和他的工资 -->
+
+            SELECT
+                emp_name 员工姓名,
+                emp_salary 员工工资,
+                (SELECT AVG(emp_salary) FROM t_emp) 部门平均工资
+            FROM t_emp WHERE emp_salary=(
+                SELECT MAX(emp_salary) FROM t_emp
+            )
+
+    </select>
 </mapper>
