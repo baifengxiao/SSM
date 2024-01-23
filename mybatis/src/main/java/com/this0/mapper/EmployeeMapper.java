@@ -7,7 +7,10 @@ import java.util.Map;
 
 public interface EmployeeMapper {
 
+
     int selectEmpCount();
+
+//    返回实体类对象
     Employee selectEmployee(Integer empId);
     int updateEmployee(@Param("empId") Integer empId, @Param("empSalary") Integer empSalary);
     int insertEmployee(Employee employee);
