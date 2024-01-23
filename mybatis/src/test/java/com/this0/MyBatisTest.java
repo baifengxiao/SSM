@@ -6,43 +6,41 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MyBatisTest {
 
+    private SqlSession session;
+    //junit5会在每一个@Test方法前执行@BeforeEach方法
+    @BeforeEach
+    public void init() throws IOException {
+        session = new SqlSessionFactoryBuilder()
+                .build(
+                        Resources.getResourceAsStream("mybatis-config.xml"))
+                .openSession();
+    }
+
     @Test
-    public void testSelectEmployee() throws IOException {
+    public void testUpdateEmpNameByMap() {
+        EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+        Map<String, Object> paramMap = new HashMap<>();
 
-        // 1.创建SqlSessionFactory对象
-        // ①声明Mybatis全局配置文件的路径
-        String mybatisConfigFilePath = "mybatis-config.xml";
+        paramMap.put("empSalaryKey", 999.99);
+        paramMap.put("empIdKey", 4);
 
-        // ②以输入流的形式加载Mybatis配置文件
-        InputStream inputStream = Resources.getResourceAsStream(mybatisConfigFilePath);
+        int result = mapper.updateEmployeeByMap(paramMap);
+    }
 
-        // ③基于读取Mybatis配置文件的输入流创建SqlSessionFactory对象
-        SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-
-        // 2.使用SqlSessionFactory对象开启一个会话
-        SqlSession session = sessionFactory.openSession();
-
-        // 3.根据EmployeeMapper接口的Class对象获取Mapper接口类型的对象(动态代理技术)
-        EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
-
-        // 4. 调用代理类方法既可以触发对应的SQL语句
-//        Employee employee = employeeMapper.selectEmployee(1);
-//
-//        System.out.println("employee = " + employee);
-
-        int result = employeeMapper.updateEmployee(1, 3);
-        System.out.println("result = " + result);
-
-        // 4.关闭SqlSession
-        session.commit(); //提交事务 [DQL不需要,其他需要]
-        session.close(); //关闭会话
-
+    @AfterEach
+    public void clear() {
+        session.commit();
+        session.close();
     }
 }
