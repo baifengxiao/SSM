@@ -16,6 +16,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -23,6 +24,16 @@ public class MyBatisTest {
 
     private Logger logger = LoggerFactory.getLogger(MyBatisTest.class);
     private SqlSession session;
+    
+    @Test
+    public void testList(){
+        EmployeeMapper employeeMapper = session.getMapper(EmployeeMapper.class);
+        List<Employee> list = employeeMapper.selectAll();
+        for (Employee employee : list) {
+            logger.info(String.valueOf(employee));
+        }
+
+    }
 
     @Test
     public void testQueryEmpNameAndSalary() {

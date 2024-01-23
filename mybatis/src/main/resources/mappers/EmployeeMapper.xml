@@ -32,4 +32,8 @@
             )
 
     </select>
+    <select id="selectAll" resultType="com.this0.pojo.Employee">
+        select  emp_id , emp_name, emp_salary
+        from t_emp
+    </select>
 </mapper>

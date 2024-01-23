@@ -3,9 +3,12 @@ package com.this0.mapper;
 import com.this0.pojo.Employee;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
 import java.util.Map;
 
 public interface EmployeeMapper {
+
+    List<Employee> selectAll();
 
     Map<String,Object> selectEmpNameAndMaxSalary();
 
