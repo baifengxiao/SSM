@@ -36,7 +36,6 @@
 
     <!--引入MyBatis映射文件-->
     <mappers>
-        <mapper resource="mappers/OrderMapper.xml"/>
-        <mapper resource="mappers/CustomerMapper.xml"/>
+        <package name="com.this0.mapper"/>
     </mappers>
 </configuration>
