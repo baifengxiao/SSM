@@ -6,6 +6,8 @@
     <properties resource="jdbc.properties"></properties>
 
     <settings>
+        <!--开启resultMap自动映射 -->
+        <setting name="autoMappingBehavior" value="FULL"/>
         <!-- 开启驼峰式映射-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!-- 开启logback日志输出-->

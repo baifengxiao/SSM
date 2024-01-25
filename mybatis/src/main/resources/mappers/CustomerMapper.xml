@@ -12,7 +12,7 @@
         <!-- 映射Customer本身的属性 -->
         <id column="customer_id" property="customerId"/>
 
-        <result column="customer_name" property="customerName"/>
+<!--        <result column="customer_name" property="customerName"/>-->
 
         <!-- collection标签：映射“对多”的关联关系 -->
         <!-- property属性：在Customer类中，关联“多”的一端的属性名 -->
@@ -22,7 +22,7 @@
             <!-- 映射Order的属性 -->
             <id column="order_id" property="orderId"/>
 
-            <result column="order_name" property="orderName"/>
+<!--            <result column="order_name" property="orderName"/>-->
 
         </collection>
 
