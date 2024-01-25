@@ -1,5 +1,7 @@
 package com.this0;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.this0.mapper.EmployeeMapper;
 import com.this0.mapper.UserMapper;
 import com.this0.pojo.Employee;
@@ -61,10 +63,32 @@ public class MyBatisTest2 {
     }
 
     @Test
-    public void selectByIdTest() {
+    public void selectList() {
         UserMapper userMapper = session.getMapper(UserMapper.class);
-        User user = userMapper.selectById(1);
-        System.out.println("user = " + user);
+//        User user = userMapper.selectById(1);
+//        System.out.println("user = " + user);
+
+
+//        分页插件
+        PageHelper.startPage(2,3);
+        // 查询Customer对象同时将关联的Order集合查询出来
+        List<User> users = userMapper.selectAll();
+
+        PageInfo<User> pageInfo = new PageInfo<>(users);
+
+        System.out.println("pageInfo = " + pageInfo);
+        long total = pageInfo.getTotal(); // 获取总记录数
+        System.out.println("total = " + total);
+        int pages = pageInfo.getPages();  // 获取总页数
+        System.out.println("pages = " + pages);
+        int pageNum = pageInfo.getPageNum(); // 获取当前页码
+        System.out.println("pageNum = " + pageNum);
+        int pageSize = pageInfo.getPageSize(); // 获取每页显示记录数
+        System.out.println("pageSize = " + pageSize);
+        List<User> list = pageInfo.getList();//获取查询页的数据集合
+        System.out.println("list = " + list);
+        list.forEach(System.out::println);
+
     }
 
     @Test

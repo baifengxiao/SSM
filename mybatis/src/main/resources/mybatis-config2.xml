@@ -17,6 +17,11 @@
     <typeAliases>
         <package name="com.this0.pojo"/>
     </typeAliases>
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <property name="helperDialect" value="mysql"/>
+        </plugin>
+    </plugins>
 
     <environments default="development">
         <environment id="development">
@@ -38,4 +43,5 @@
     <mappers>
         <package name="com.this0.mapper"/>
     </mappers>
+
 </configuration>
