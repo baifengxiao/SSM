@@ -29,6 +29,8 @@ public class MyBatisTest2 {
     public void init() throws IOException {
         session = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("mybatis-config2.xml")).openSession();
     }
+
+
     @Test
     public void createTest() {
         User user = new User();
