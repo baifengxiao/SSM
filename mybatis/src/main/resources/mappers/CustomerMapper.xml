@@ -32,7 +32,7 @@
     <select id="selectCustomerWithOrderList" resultMap="selectCustomerWithOrderListResultMap">
         select c.customer_id, customer_name, order_id, order_name
         from t_order o
-                 inner join t_customer c on o.customer_id = c.customer_id
+                 left join t_customer c on o.customer_id = c.customer_id
         where c.customer_id = #{customerId}
     </select>
 </mapper>
