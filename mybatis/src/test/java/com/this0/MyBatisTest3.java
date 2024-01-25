@@ -1,6 +1,8 @@
 package com.this0;
 
+import com.this0.mapper.CustomerMapper;
 import com.this0.mapper.OrderMapper;
+import com.this0.pojo.Customer;
 import com.this0.pojo.Order;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -27,6 +29,14 @@ public class MyBatisTest3 {
         OrderMapper orderMapper = session.getMapper(OrderMapper.class);
         Order order = orderMapper.selectOrderWithCustomer(1);
         logger.info(order.toString());
+    }
+
+    @Test
+    public void test2(){
+        CustomerMapper mapper = session.getMapper(CustomerMapper.class);
+        Customer customer = mapper.selectCustomerWithOrderList(1);
+        logger.info(customer.toString());
+
     }
 
     @AfterEach
