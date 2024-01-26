@@ -13,6 +13,7 @@
         <module>spring6-ioc-annotation</module>
         <module>spring6-aop</module>
         <module>mybatis</module>
+        <module>spring-junit</module>
     </modules>
 
     <properties>
@@ -22,20 +23,19 @@
     </properties>
 
     <dependencies>
-            <!-- mybatis依赖 -->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>3.5.11</version>
-            </dependency>
+        <!-- mybatis依赖 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.11</version>
+        </dependency>
 
-            <!-- MySQL驱动 mybatis底层依赖jdbc驱动实现,本次不需要导入连接池,mybatis自带! -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.25</version>
-            </dependency>
-
+        <!-- MySQL驱动 mybatis底层依赖jdbc驱动实现,本次不需要导入连接池,mybatis自带! -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+        </dependency>
 
 
         <!--spring context依赖-->
@@ -45,6 +45,12 @@
             <artifactId>spring-context</artifactId>
             <version>6.0.2</version>
         </dependency>
+        <!--spring对junit的支持相关依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>6.0.2</version>
+        </dependency>
 
         <!--junit5测试-->
         <dependency>
@@ -52,7 +58,12 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.3.1</version>
         </dependency>
-
+        <!-- junit测试 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
         <!--log4j2的依赖-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
