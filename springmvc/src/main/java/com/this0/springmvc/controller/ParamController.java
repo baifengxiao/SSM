@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("param")
 public class ParamController {
@@ -40,5 +42,16 @@ public class ParamController {
         return name+age;
     }
 
+    /**
+     * 前端请求: http://localhost:8080/param/mul?hbs=吃&hbs=喝
+     *
+     *  一名多值,可以使用集合接收即可!但是需要使用@RequestParam注解指定
+     */
+    @GetMapping(value="/mul")
+    @ResponseBody
+    public Object mulForm(@RequestParam List<String> hbs){
+        System.out.println("hbs = " + hbs);
+        return hbs;
+    }
 
 }
