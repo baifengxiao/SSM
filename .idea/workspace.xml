@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="测试自动装配方法注入">
+    <list default="true" id="a53f69cd-9465-44a6-9caa-d0527da69754" name="更改" comment="Spring的Aop测试">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/dao/Impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/dao/Impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring6-ioc-annotation/src/main/java/com/this0/spring6/service/Impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="spring-beans.schema" />
       </list>
     </option>
   </component>
@@ -67,8 +66,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SDE_YPT/Data_YPT/Idea_Project/SSM/spring6-ioc-annotation/src/main/resources&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/SDE_YPT/Data_YPT/Idea_Project/SSM/spring-junit/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,47 +85,16 @@
       <recent name="com.this0.spring6.bean" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SDE_YPT\Data_YPT\Idea_Project\SSM\spring-junit\src\main\resources" />
       <recent name="D:\SDE_YPT\Data_YPT\Idea_Project\SSM\spring6-ioc-annotation\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.this0.spring6" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest.testAnnotation">
-    <configuration name="HelloWorldTest.testHelloWorld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.this0.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.this0" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.HelloWorldTest" />
-      <option name="METHOD_NAME" value="testHelloWorld" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HelloWorldTest.testHelloWorld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.this0.spring6.bean.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.HelloWorldTest" />
-      <option name="METHOD_NAME" value="testHelloWorld" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-ioc-annotation" />
+  <component name="RunManager" selected="JUnit.TestAop.testAdd">
+    <configuration name="Junit4Test.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-junit" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.this0.spring6.*" />
@@ -134,8 +102,56 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.this0.spring6" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.UserTest" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.Junit4Test" />
+      <option name="METHOD_NAME" value="testUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Junit5Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-junit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.this0.spring6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.this0.spring6" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.Junit5Test" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Junit5Test.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-junit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.this0.spring6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.this0.spring6" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.Junit5Test" />
+      <option name="METHOD_NAME" value="testUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAop.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring6-aop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.this0.aop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.this0.aop" />
+      <option name="MAIN_CLASS_NAME" value="com.this0.aop.TestAop" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,45 +172,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testAutoWireByXML.testUserFactoryBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.this0.spring6.dao.imp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.testAutoWireByXML" />
-      <option name="METHOD_NAME" value="testUserFactoryBean" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testDI.testDIBySet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring6-first" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.this0.spring6.dao.imp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.this0.spring6.bean" />
-      <option name="MAIN_CLASS_NAME" value="com.this0.spring6.bean.testDI" />
-      <option name="METHOD_NAME" value="testDIBySet" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAop.testAdd" />
+        <item itemvalue="JUnit.Junit5Test" />
+        <item itemvalue="JUnit.Junit4Test.testUser" />
+        <item itemvalue="JUnit.Junit5Test.testUser" />
         <item itemvalue="JUnit.UserTest.testAnnotation" />
-        <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.testAutoWireByXML.testUserFactoryBean" />
-        <item itemvalue="JUnit.testDI.testDIBySet" />
-        <item itemvalue="JUnit.HelloWorldTest.testHelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +194,10 @@
       <option name="presentableId" value="Default" />
       <updated>1691773778002</updated>
       <workItem from="1705548156138" duration="11777000" />
+      <workItem from="1706266729485" duration="1425000" />
+      <workItem from="1706268872785" duration="1278000" />
+      <workItem from="1706272426475" duration="78000" />
+      <workItem from="1706611789603" duration="2240000" />
     </task>
     <task id="LOCAL-00001" summary="1.Spring:通过配置文件获取对象实践">
       <option name="closed" value="true" />
@@ -291,7 +279,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705705322729</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Spring的Junit测试">
+      <option name="closed" value="true" />
+      <created>1706267903307</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706267903307</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Spring的Aop测试">
+      <option name="closed" value="true" />
+      <created>1706614105746</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706614105746</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +334,8 @@
     <MESSAGE value="测试FactoryBean" />
     <MESSAGE value="测试自动装配属性注入" />
     <MESSAGE value="测试自动装配方法注入" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试自动装配方法注入" />
+    <MESSAGE value="Spring的Junit测试" />
+    <MESSAGE value="Spring的Aop测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring的Aop测试" />
   </component>
 </project>
