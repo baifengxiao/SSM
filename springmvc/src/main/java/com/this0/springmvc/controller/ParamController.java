@@ -10,6 +10,17 @@ import java.util.List;
 @RequestMapping("param")
 public class ParamController {
 
+    @RequestMapping(value = "/user/detail", method = RequestMethod.POST)
+    @ResponseBody
+    public User getUser(@RequestBody User userParam) {
+        System.out.println("userParam = " + userParam);
+        User user = new User();
+        user.setAge(18);
+        user.setName("John");
+        //返回的对象,会使用jackson的序列化工具,转成json返回给前端!
+        return user;
+    }
+
     /**
      * 动态路径设计: /user/{动态部分}/{动态部分}   动态部分使用{}包含即可! {}内部动态标识!
      * 形参列表取值: @PathVariable Long id  如果形参名 = {动态标识} 自动赋值!
