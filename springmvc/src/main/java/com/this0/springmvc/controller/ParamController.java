@@ -1,16 +1,22 @@
 package com.this0.springmvc.controller;
 
+import com.this0.springmvc.pojo.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
 @RequestMapping("param")
 public class ParamController {
+
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    @ResponseBody
+    public String addUser(User user) {
+        // 在这里可以使用 user 对象的属性来接收请求参数
+        System.out.println("user = " + user);
+        return "success";
+    }
 
     /**
      * 前端请求: http://localhost:8080/param/value?name=xx&age=18
