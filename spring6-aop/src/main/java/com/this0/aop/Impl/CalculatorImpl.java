@@ -1,7 +1,9 @@
 package com.this0.aop.Impl;
 
 import com.this0.aop.Calculator;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CalculatorImpl implements Calculator {
 
     @Override
