@@ -3,6 +3,7 @@ package com.this0.springmvc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -24,4 +25,20 @@ public class ParamController {
         System.out.println("name = " + name + ", age = " + age);
         return name + age;
     }
+
+    /**
+     * 前端请求: http://localhost:8080/param/data?name=xx&stuAge=18
+     *
+     *  使用@RequestParam注解标记handler方法的形参
+     *  指定形参对应的请求参数@RequestParam(请求参数名称)
+     */
+    @GetMapping(value="/data")
+    @ResponseBody
+    public Object paramForm(@RequestParam("name") String name,
+                            @RequestParam("stuAge") int age){
+        System.out.println("name = " + name + ", age = " + age);
+        return name+age;
+    }
+
+
 }
