@@ -11,4 +11,8 @@ public class testDI {
         Student studentOne = ac.getBean("studentFour", Student.class);
         System.out.println(studentOne);
     }
+    @Test
+    public void testExperiment09()  {
+        ApplicationContext iocContainer = new ClassPathXmlApplicationContext("spring-di.xml");
+    }
 }
