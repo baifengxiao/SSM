@@ -10,4 +10,16 @@
 
     <bean id="userDao" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>
     <bean id="userDaoImpl" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>
+<!--补一个级联属性赋值-->
+    <bean id="studentFour" class="com.this0.spring6.bean.Student">
+        <property name="id" value="1004"></property>
+        <property name="name" value="赵六"></property>
+        <property name="age" value="26"></property>
+        <property name="sex" value="女"></property>
+        <property name="clazz" ref="clazzOne"></property>
+        <property name="clazz.clazzId" value="3333"></property>
+        <property name="clazz.clazzName" value="最强王者班"></property>
+    </bean>
+    <bean id="clazzOne" class="com.this0.spring6.bean.Clazz">
+    </bean>
 </beans>
