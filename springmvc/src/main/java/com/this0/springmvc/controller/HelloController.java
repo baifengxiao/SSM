@@ -1,6 +1,8 @@
 package com.this0.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,5 +21,9 @@ public class HelloController {
     public String hello(){
         System.out.println("HelloController.hello");
         return "hello springmvc!!";
+    }
+    @GetMapping("/demo")
+    public void handle(@CookieValue("JSESSIONID") String cookie) {
+        System.out.println("接收到了cookie数据："+cookie);
     }
 }
