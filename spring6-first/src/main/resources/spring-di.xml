@@ -3,11 +3,31 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userController" class="com.this0.spring6.controller.UserController" autowire="byName"></bean>
+<!--    <bean id="userController" class="com.this0.spring6.controller.UserController" autowire="byName"></bean>-->
 
-    <bean id="userService" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byName"></bean>
-    <bean id="userServiceImpl" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byName"></bean>
+<!--    <bean id="userService" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byName"></bean>-->
+<!--    <bean id="userServiceImpl" class="com.this0.spring6.service.imp.UserServiceImpl" autowire="byName"></bean>-->
 
-    <bean id="userDao" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>
-    <bean id="userDaoImpl" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>
+<!--    <bean id="userDao" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>-->
+<!--    <bean id="userDaoImpl" class="com.this0.spring6.dao.imp.UserDaoImpl"></bean>-->
+<!--&lt;!&ndash;补一个级联属性赋值&ndash;&gt;-->
+<!--    <bean id="studentFour" class="com.this0.spring6.bean.Student">-->
+<!--        <property name="id" value="1004"></property>-->
+<!--        <property name="name" value="赵六"></property>-->
+<!--        <property name="age" value="26"></property>-->
+<!--        <property name="sex" value="女"></property>-->
+<!--        <property name="clazz" ref="clazzOne"></property>-->
+<!--        <property name="clazz.clazzId" value="3333"></property>-->
+<!--        <property name="clazz.clazzName" value="最强王者班"></property>-->
+<!--    </bean>-->
+<!--    <bean id="clazzOne" class="com.this0.spring6.bean.Clazz">-->
+<!--    </bean>-->
+    <!-- 声明BeanPostProcessor处理器 -->
+    <bean class="com.this0.spring6.bean.MyBeanPostProcessor" />
+
+    <!-- 声明bean,并且指定初始化和销毁方法
+              init-method 指定初始化方法
+              destroy-method 指定销毁方法
+        -->
+    <bean id="myBean"  class="com.this0.spring6.bean.MyBean" init-method="init" destroy-method="destroy"/>
 </beans>
