@@ -2,6 +2,8 @@ package com.this0.springmvc.controller;
 
 
 import com.this0.springmvc.pojo.User;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -73,5 +75,22 @@ public class UserRestful {
         return "{'status':'ok'}";
     }
 
+    /**
+     * @Validated 代表应用校验注解! 必须添加!
+     */
+    @PostMapping("save")
+    public Object save(@Validated @RequestBody User user,
+                       //在实体类参数和 BindingResult 之间不能有任何其他参数, BindingResult可以接受错误信息,避免信息抛出!
+                       BindingResult result){
+        //判断是否有信息绑定错误! 有可以自行处理!
+        if (result.hasErrors()){
+            System.out.println("错误");
+            String errorMsg = result.getFieldError().toString();
+            return errorMsg;
+        }
+        //没有,正常处理业务即可
+        System.out.println("正常");
+        return user;
+    }
 
 }

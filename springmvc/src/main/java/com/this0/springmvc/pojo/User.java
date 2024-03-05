@@ -1,8 +1,16 @@
 package com.this0.springmvc.pojo;
 
+import jakarta.validation.constraints.Min;
+import org.hibernate.validator.constraints.Length;
+
 public class User {
     private Integer id;
+
+
+    @Length(min = 3,max = 10)
     private String name;
+
+    @Min(10)
     private int age = 18;
 
     public Integer getId() {
